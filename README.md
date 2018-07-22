@@ -1,0 +1,1 @@
+# logrus-micro-hook
