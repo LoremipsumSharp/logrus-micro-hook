@@ -214,7 +214,7 @@ func (h *Hook) flushEntries(entries []*logrus.Entry) error {
 		return err
 	}
 
-	fmt.Println(string(buffer))
+	//fmt.Println(string(buffer))
 
 	request, err := http.NewRequest("POST", h.ProxyURL, bytes.NewReader(buffer))
 	if err != nil {

@@ -41,7 +41,7 @@ func (f *formatter) Format(entry *logrus.Entry) ([]byte, error) {
 	}
 
 	record[f.fieldName("message")] = entry.Message
-	record[f.fieldName("logTime")] = entry.Time.Unix()
+	record[f.fieldName("logTime")] = entry.Time.UnixNano()/1000/1000
 	record[f.fieldName("level")] = entry.Level.String()
 
 	json, err := json.Marshal(record)
