@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"net/url"
 	"time"
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 )
 
 type Hook struct {
